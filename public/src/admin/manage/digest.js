@@ -3,7 +3,7 @@
 
 define('admin/manage/digest', ['bootbox', 'alerts'], function (bootbox, alerts) {
 	const Digest = {};
-	console.log("Mia Li")
+	console.log("Mia Li");
 	Digest.init = function () {
 		$('.digest').on('click', '[data-action]', function () {
 			const action = this.getAttribute('data-action');
