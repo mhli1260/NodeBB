@@ -2,7 +2,7 @@
 
 define('admin/manage/digest', ['bootbox', 'alerts'], function (bootbox, alerts) {
 	const Digest = {};
-	function errorCheck(err) {
+	function errorCheck(err, interval) {
 		if (err) {
 			return alerts.error(err);
 		}
@@ -17,7 +17,7 @@ define('admin/manage/digest', ['bootbox', 'alerts'], function (bootbox, alerts) 
 				const interval = action.slice(7);
 				bootbox.confirm('[[admin/manage/digest:resend-all-confirm]]', function (ok) {
 					if (ok) {
-						Digest.send(action, undefined, errorCheck(err));
+						Digest.send(action, undefined, errorCheck(err, interval));
 					}
 				});
 			} else {
