@@ -2,7 +2,12 @@
 
 define('admin/manage/digest', ['bootbox', 'alerts'], function (bootbox, alerts) {
 	const Digest = {};
-	
+	function errorCheck(err) {
+		if (err) {
+			return alerts.error(err);
+		}
+			alerts.success('[[admin/manage/digest:resent-' + interval + ']]');
+	}
 	Digest.init = function () {
 		$('.digest').on('click', '[data-action]', function () {
 			const action = this.getAttribute('data-action');
