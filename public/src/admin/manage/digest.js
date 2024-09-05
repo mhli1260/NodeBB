@@ -25,7 +25,7 @@ define('admin/manage/digest', ['bootbox', 'alerts'], function (bootbox, alerts) 
 			alerts.success('[[admin/manage/digest:resent-single]]');
 		});
 	}
->>>>>>> refactor_nesting_warning_digest.js
+
 	Digest.init = function () {
 		$('.digest').on('click', '[data-action]', function () {
 			const action = this.getAttribute('data-action');
