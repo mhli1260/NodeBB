@@ -2,9 +2,6 @@
 
 define('admin/manage/digest', ['bootbox', 'alerts'], function (bootbox, alerts) {
 	const Digest = {};
-<<<<<<< HEAD
-	console.log("Mia Li");
-=======
 	console.log("Mia Li")
 	function interval_resend(action) {
 		const interval = action.slice(7);
